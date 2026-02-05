@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Anand Optico - Premium Navy Blue & Gold Design System */
+
+@layer base {
+  :root {
+    /* Navy Blue Primary */
+    --background: 40 33% 98%;
+    --foreground: 220 40% 13%;
+
+    /* Cream/Off-white cards */
+    --card: 40 30% 96%;
+    --card-foreground: 220 40% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 40% 13%;
+
+    /* Navy Blue Primary */
+    --primary: 220 60% 20%;
+    --primary-foreground: 40 30% 96%;
+
+    /* Light Navy for secondary elements */
+    --secondary: 220 30% 94%;
+    --secondary-foreground: 220 60% 20%;
+
+    --muted: 220 20% 94%;
+    --muted-foreground: 220 20% 46%;
+
+    /* Gold Accent */
+    --accent: 43 74% 49%;
+    --accent-foreground: 220 40% 13%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 43 74% 49%;
+
+    --radius: 0.5rem;
+
+    /* Custom colors for optical theme */
+    --gold: 43 74% 49%;
+    --gold-light: 43 74% 65%;
+    --gold-dark: 43 74% 38%;
+    --navy: 220 60% 20%;
+    --navy-light: 220 50% 35%;
+    --navy-dark: 220 65% 12%;
+    --cream: 40 30% 96%;
+    --cream-dark: 40 25% 90%;
+
+    /* Sidebar variables */
+    --sidebar-background: 220 60% 20%;
+    --sidebar-foreground: 40 30% 96%;
+    --sidebar-primary: 43 74% 49%;
+    --sidebar-primary-foreground: 220 40% 13%;
+    --sidebar-accent: 220 50% 28%;
+    --sidebar-accent-foreground: 40 30% 96%;
+    --sidebar-border: 220 50% 30%;
+    --sidebar-ring: 43 74% 49%;
+  }
+
+  .dark {
+    --background: 220 65% 8%;
+    --foreground: 40 30% 96%;
+
+    --card: 220 60% 12%;
+    --card-foreground: 40 30% 96%;
+
+    --popover: 220 60% 12%;
+    --popover-foreground: 40 30% 96%;
+
+    --primary: 43 74% 49%;
+    --primary-foreground: 220 40% 13%;
+
+    --secondary: 220 50% 20%;
+    --secondary-foreground: 40 30% 96%;
+
+    --muted: 220 40% 18%;
+    --muted-foreground: 220 20% 65%;
+
+    --accent: 43 74% 49%;
+    --accent-foreground: 220 40% 13%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 40% 22%;
+    --input: 220 40% 22%;
+    --ring: 43 74% 49%;
+
+    --sidebar-background: 220 65% 8%;
+    --sidebar-foreground: 40 30% 96%;
+    --sidebar-primary: 43 74% 49%;
+    --sidebar-primary-foreground: 220 40% 13%;
+    --sidebar-accent: 220 50% 18%;
+    --sidebar-accent-foreground: 40 30% 96%;
+    --sidebar-border: 220 50% 20%;
+    --sidebar-ring: 43 74% 49%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .gold-gradient {
+    @apply bg-gradient-to-r from-[hsl(43, 74%, 38%)] via-[hsl(43, 74%, 49%)] to-[hsl(43, 74%, 38%)];
+  }
+
+  .navy-gradient {
+    @apply bg-gradient-to-br from-[hsl(220, 60%, 20%)] to-[hsl(220, 65%, 12%)];
+  }
+
+  .text-gold {
+    color: hsl(43, 74%, 49%);
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300 ease-out hover:scale-105;
+  }
+
+  .elegant-shadow {
+    box-shadow: 0 4px 20px -4px hsl(220 60% 20% / 0.15);
+  }
+
+  .gold-border {
+    border-color: hsl(43, 74%, 49%);
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .container-padding {
+    @apply px-4 md:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--navy));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--navy-light));
+}
